@@ -1,0 +1,44 @@
+﻿[INFO] Scanning for projects...
+[INFO] 
+[INFO] ----------------------< com.codeb:invoice-system >----------------------
+[INFO] Building invoice-system 0.0.1-SNAPSHOT
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- clean:3.3.2:clean (default-clean) @ invoice-system ---
+[INFO] Deleting C:\Users\ADMIN\OneDrive\Desktop\Invoice Generation\invoice-system\target
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ invoice-system ---
+[INFO] Copying 1 resource from src\main\resources to target\classes
+[INFO] Copying 4 resources from src\main\resources to target\classes
+[INFO] 
+[INFO] --- compiler:3.11.0:compile (default-compile) @ invoice-system ---
+[INFO] Changes detected - recompiling the module! :source
+[INFO] Compiling 7 source files with javac [debug release 17] to target\classes
+[INFO] -------------------------------------------------------------
+[ERROR] COMPILATION ERROR : 
+[INFO] -------------------------------------------------------------
+[ERROR] /C:/Users/ADMIN/OneDrive/Desktop/Invoice Generation/invoice-system/src/main/java/com/codeb/invoicesystem/service/PdfService.java:[47,35] reference to Rectangle is ambiguous
+  both class java.awt.Rectangle in java.awt and class com.lowagie.text.Rectangle in com.lowagie.text match
+[ERROR] /C:/Users/ADMIN/OneDrive/Desktop/Invoice Generation/invoice-system/src/main/java/com/codeb/invoicesystem/service/PdfService.java:[55,39] reference to Rectangle is ambiguous
+  both class java.awt.Rectangle in java.awt and class com.lowagie.text.Rectangle in com.lowagie.text match
+[INFO] 2 errors 
+[INFO] -------------------------------------------------------------
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  10.053 s
+[INFO] Finished at: 2026-03-07T19:38:58+05:30
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-compiler-plugin:3.11.0:compile (default-compile) on project invoice-system: Compilation failure: Compilation failure: 
+[ERROR] /C:/Users/ADMIN/OneDrive/Desktop/Invoice Generation/invoice-system/src/main/java/com/codeb/invoicesystem/service/PdfService.java:[47,35] reference to Rectangle is ambiguous
+[ERROR]   both class java.awt.Rectangle in java.awt and class com.lowagie.text.Rectangle in com.lowagie.text match
+[ERROR] /C:/Users/ADMIN/OneDrive/Desktop/Invoice Generation/invoice-system/src/main/java/com/codeb/invoicesystem/service/PdfService.java:[55,39] reference to Rectangle is ambiguous
+[ERROR]   both class java.awt.Rectangle in java.awt and class com.lowagie.text.Rectangle in com.lowagie.text match
+[ERROR] -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException

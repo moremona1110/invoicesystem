@@ -1,0 +1,104 @@
+﻿
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v3.2.4)
+
+2026-03-07T19:45:50.799+05:30  INFO 4964 --- [invoice-system] [           main] c.c.i.InvoiceSystemApplication           : Starting InvoiceSystemApplication v0.0.1-SNAPSHOT using Java 24.0.1 with PID 4964 (C:\Users\ADMIN\OneDrive\Desktop\Invoice Generation\invoice-system\target\invoice-system-0.0.1-SNAPSHOT.jar started by ADMIN in C:\Users\ADMIN\OneDrive\Desktop\Invoice Generation\invoice-system)
+2026-03-07T19:45:50.808+05:30  INFO 4964 --- [invoice-system] [           main] c.c.i.InvoiceSystemApplication           : No active profile set, falling back to 1 default profile: "default"
+2026-03-07T19:45:54.035+05:30  INFO 4964 --- [invoice-system] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-03-07T19:45:54.258+05:30  INFO 4964 --- [invoice-system] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 181 ms. Found 1 JPA repository interface.
+java : WARNING: A 
+restricted method in 
+java.lang.System has 
+been called
+At line:1 char:1
++ java -jar target/invo
+ice-system-0.0.1-SNAPSH
+OT.jar > run_h2.log 
+2>&1
++ ~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~
+~
+    + CategoryInfo     
+         : NotSpecifi  
+  ed: (WARNING: A re   
+ st...has been call    
+ed:String) [], Rem    
+oteException
+    + FullyQualifiedEr 
+   rorId : NativeComm  
+  andError
+ 
+WARNING: 
+java.lang.System::load 
+has been called by org.
+apache.tomcat.jni.Libra
+ry in an unnamed 
+module (jar:nested:/C:/
+Users/ADMIN/OneDrive/De
+sktop/Invoice%20Generat
+ion/invoice-system/targ
+et/invoice-system-0.0.1
+-SNAPSHOT.jar/!BOOT-INF
+/lib/tomcat-embed-core-
+10.1.19.jar!/)
+WARNING: Use --enable-n
+ative-access=ALL-UNNAME
+D to avoid a warning 
+for callers in this 
+module
+WARNING: Restricted 
+methods will be 
+blocked in a future 
+release unless native 
+access is enabled
+
+2026-03-07T19:45:56.164+05:30  INFO 4964 --- [invoice-system] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2026-03-07T19:45:56.196+05:30  INFO 4964 --- [invoice-system] [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-03-07T19:45:56.198+05:30  INFO 4964 --- [invoice-system] [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.19]
+2026-03-07T19:45:56.276+05:30  INFO 4964 --- [invoice-system] [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-03-07T19:45:56.278+05:30  INFO 4964 --- [invoice-system] [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 5013 ms
+2026-03-07T19:45:56.380+05:30  INFO 4964 --- [invoice-system] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-03-07T19:45:57.181+05:30  INFO 4964 --- [invoice-system] [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:invoice_db user=SA
+2026-03-07T19:45:57.186+05:30  INFO 4964 --- [invoice-system] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-03-07T19:45:57.235+05:30  INFO 4964 --- [invoice-system] [           main] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:invoice_db'
+2026-03-07T19:45:57.855+05:30  INFO 4964 --- [invoice-system] [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-03-07T19:45:58.090+05:30  INFO 4964 --- [invoice-system] [           main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.4.4.Final
+2026-03-07T19:45:58.210+05:30  INFO 4964 --- [invoice-system] [           main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2026-03-07T19:45:58.803+05:30  INFO 4964 --- [invoice-system] [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-03-07T19:45:58.914+05:30  WARN 4964 --- [invoice-system] [           main] org.hibernate.orm.deprecation            : HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-03-07T19:46:01.066+05:30  INFO 4964 --- [invoice-system] [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+Hibernate: 
+    create table invoice (
+        id integer generated by default as identity,
+        amount_payable float(24),
+        balance float(24),
+        chain_id integer not null,
+        cost_per_qty float(24),
+        date_of_payment timestamp(6),
+        date_of_service date,
+        delivery_details varchar(100),
+        email_id varchar(50),
+        estimated_id integer not null,
+        invoice_no integer not null,
+        qty integer,
+        service_details varchar(50),
+        primary key (id)
+    )
+Hibernate: 
+    alter table if exists invoice 
+       drop constraint if exists UK_ece1srr6o3r3wc7i4yi5l6alf
+Hibernate: 
+    alter table if exists invoice 
+       add constraint UK_ece1srr6o3r3wc7i4yi5l6alf unique (invoice_no)
+2026-03-07T19:46:01.210+05:30  INFO 4964 --- [invoice-system] [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-03-07T19:46:02.867+05:30  WARN 4964 --- [invoice-system] [           main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-03-07T19:46:02.960+05:30  INFO 4964 --- [invoice-system] [           main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
+2026-03-07T19:46:04.060+05:30  WARN 4964 --- [invoice-system] [           main] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates, check your Thymeleaf configuration, or set spring.thymeleaf.check-template-location=false)
+2026-03-07T19:46:04.534+05:30  INFO 4964 --- [invoice-system] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path ''
+2026-03-07T19:46:04.614+05:30  INFO 4964 --- [invoice-system] [           main] c.c.i.InvoiceSystemApplication           : Started InvoiceSystemApplication in 15.385 seconds (process running for 17.83)

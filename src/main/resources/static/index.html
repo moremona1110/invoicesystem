@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>InvoiceFlow | Dashboard</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">
+                <h1>InvoiceFlow</h1>
+                <p style="font-size: 0.8rem; color: var(--text-muted);">Manage your business efficiently</p>
+            </div>
+            <div class="actions">
+                <button class="theme-toggle" id="themeToggle" title="Toggle Theme">
+                    <i data-lucide="moon"></i>
+                </button>
+                <a href="create-invoice.html" class="btn btn-primary">
+                    <i data-lucide="plus"></i> New Invoice
+                </a>
+            </div>
+        </header>
+
+        <main>
+            <div class="card">
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.5rem;">
+                    <h2 style="font-size: 1.1rem; font-weight: 600;">Recent Invoices</h2>
+                    <div class="form-group" style="margin-bottom: 0; width: 300px;">
+                        <input type="text" id="searchInput" class="form-control" placeholder="Search invoices...">
+                    </div>
+                </div>
+                <div style="overflow-x: auto;">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Invoice #</th>
+                                <th>Customer Email</th>
+                                <th>Service</th>
+                                <th>Date</th>
+                                <th>Amount (Inc. GST)</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody id="invoiceTableBody">
+                            <!-- Invoices will be loaded here -->
+                            <tr>
+                                <td colspan="6" style="text-align: center; padding: 2rem; color: var(--text-muted);">
+                                    Loading invoices...
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="js/app.js"></script>
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+</html>
